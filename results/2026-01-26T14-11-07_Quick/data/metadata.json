@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-01-26T14:22:39.864Z",
+  "profile": "Quick",
+  "totalDuration": 692.601,
+  "results": [
+    {
+      "test": "express-node",
+      "success": true,
+      "duration": 95.96
+    },
+    {
+      "test": "express-bun",
+      "success": true,
+      "duration": 70.657
+    },
+    {
+      "test": "express-deno",
+      "success": true,
+      "duration": 74.73
+    },
+    {
+      "test": "hono-node",
+      "success": true,
+      "duration": 81.348
+    },
+    {
+      "test": "hono-bun",
+      "success": true,
+      "duration": 70.063
+    },
+    {
+      "test": "hono-deno",
+      "success": true,
+      "duration": 73.808
+    },
+    {
+      "test": "elysia-node",
+      "success": true,
+      "duration": 80.568
+    },
+    {
+      "test": "elysia-bun",
+      "success": true,
+      "duration": 70.518
+    },
+    {
+      "test": "elysia-deno",
+      "success": true,
+      "duration": 74.945
+    }
+  ]
+}

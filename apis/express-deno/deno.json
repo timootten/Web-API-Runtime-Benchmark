@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "start": "deno run --allow-net --allow-env --allow-ffi --allow-read --allow-write --unstable-ffi index.ts"
+  },
+  "imports": {
+    "express": "npm:express@^4.18.2",
+    "@db/sqlite": "jsr:@db/sqlite@0.12"
+  }
+}

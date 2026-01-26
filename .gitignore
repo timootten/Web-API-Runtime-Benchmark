@@ -1,0 +1,8 @@
+node_modules/
+dist/
+results/*.json
+results/*.html
+results/*.csv
+!results/.gitkeep
+.env
+*.log

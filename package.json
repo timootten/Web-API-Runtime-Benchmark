@@ -1,0 +1,25 @@
+{
+  "name": "web-api-runtime-benchmark",
+  "version": "1.0.0",
+  "description": "Performance benchmark for Express, Hono, and Elysia on Node.js, Bun, and Deno",
+  "type": "module",
+  "scripts": {
+    "build:k6": "esbuild k6/benchmark.ts k6/warmup.ts --bundle --outdir=k6/dist --platform=neutral --target=es2020 --external:k6 --external:k6/*",
+    "benchmark": "npm run build:k6 && tsx scripts/run-benchmarks.ts --profile standard",
+    "benchmark:quick": "npm run build:k6 && tsx scripts/run-benchmarks.ts --profile quick",
+    "benchmark:standard": "npm run build:k6 && tsx scripts/run-benchmarks.ts --profile standard",
+    "benchmark:full": "npm run build:k6 && tsx scripts/run-benchmarks.ts --profile full",
+    "clean": "rimraf results/* k6/dist"
+  },
+  "devDependencies": {
+    "@types/k6": "^1.5.0",
+    "@types/node": "^20.10.0",
+    "esbuild": "^0.27.2",
+    "rimraf": "^5.0.5",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

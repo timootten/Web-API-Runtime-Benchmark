@@ -1,0 +1,198 @@
+services:
+  # ============================================
+  # EXPRESS SERVICES
+  # ============================================
+  express-node:
+    build:
+      context: ./apis/express-node
+      dockerfile: Dockerfile
+    container_name: express-node
+    environment:
+      - PORT=3000
+    ports:
+      - "3010:3000"
+    networks:
+      - benchmark-network
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: 512M
+    profiles:
+      - express-node
+
+  express-bun:
+    build:
+      context: ./apis/express-bun
+      dockerfile: Dockerfile
+    container_name: express-bun
+    environment:
+      - PORT=3000
+    ports:
+      - "3011:3000"
+    networks:
+      - benchmark-network
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: 512M
+    profiles:
+      - express-bun
+
+  express-deno:
+    build:
+      context: ./apis/express-deno
+      dockerfile: Dockerfile
+    container_name: express-deno
+    environment:
+      - PORT=3000
+    ports:
+      - "3012:3000"
+    networks:
+      - benchmark-network
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: 512M
+    profiles:
+      - express-deno
+
+  # ============================================
+  # HONO SERVICES
+  # ============================================
+  hono-node:
+    build:
+      context: ./apis/hono-node
+      dockerfile: Dockerfile
+    container_name: hono-node
+    environment:
+      - PORT=3000
+    ports:
+      - "3020:3000"
+    networks:
+      - benchmark-network
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: 512M
+    profiles:
+      - hono-node
+
+  hono-bun:
+    build:
+      context: ./apis/hono-bun
+      dockerfile: Dockerfile
+    container_name: hono-bun
+    environment:
+      - PORT=3000
+    ports:
+      - "3021:3000"
+    networks:
+      - benchmark-network
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: 512M
+    profiles:
+      - hono-bun
+
+  hono-deno:
+    build:
+      context: ./apis/hono-deno
+      dockerfile: Dockerfile
+    container_name: hono-deno
+    environment:
+      - PORT=3000
+    ports:
+      - "3022:3000"
+    networks:
+      - benchmark-network
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: 512M
+    profiles:
+      - hono-deno
+
+  # ============================================
+  # ELYSIA SERVICES
+  # ============================================
+  elysia-node:
+    build:
+      context: ./apis/elysia-node
+      dockerfile: Dockerfile
+    container_name: elysia-node
+    environment:
+      - PORT=3000
+    ports:
+      - "3030:3000"
+    networks:
+      - benchmark-network
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: 512M
+    profiles:
+      - elysia-node
+
+  elysia-bun:
+    build:
+      context: ./apis/elysia-bun
+      dockerfile: Dockerfile
+    container_name: elysia-bun
+    environment:
+      - PORT=3000
+    ports:
+      - "3031:3000"
+    networks:
+      - benchmark-network
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: 512M
+    profiles:
+      - elysia-bun
+
+  elysia-deno:
+    build:
+      context: ./apis/elysia-deno
+      dockerfile: Dockerfile
+    container_name: elysia-deno
+    environment:
+      - PORT=3000
+    ports:
+      - "3032:3000"
+    networks:
+      - benchmark-network
+    deploy:
+      resources:
+        limits:
+          cpus: "1"
+          memory: 512M
+    profiles:
+      - elysia-deno
+
+  # ============================================
+  # K6 LOAD TESTER
+  # ============================================
+  k6:
+    image: grafana/k6:latest
+    container_name: benchmark-k6
+    volumes:
+      - ./k6:/scripts
+      - ./results:/results
+    networks:
+      - benchmark-network
+    profiles:
+      - k6
+
+networks:
+  benchmark-network:
+    driver: bridge
