@@ -57,8 +57,8 @@ app.post('/users', async (c) => {
     return c.json({ error: 'Name and email are required' }, 400);
   }
 
-  const result = insertUser.run(name, email);
-  const user = getUser.get(result.lastInsertRowId);
+  insertUser.run(name, email);
+  const user = getUser.get(db.lastInsertRowId);
   return c.json(user, 201);
 });
 

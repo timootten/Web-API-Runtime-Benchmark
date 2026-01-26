@@ -56,8 +56,8 @@ const app = new Elysia()
       return { error: 'Name and email are required' };
     }
 
-    const result = insertUser.run(name, email);
-    const user = getUser.get(result.lastInsertRowId);
+    insertUser.run(name, email);
+    const user = getUser.get(db.lastInsertRowId);
     set.status = 201;
     return user;
   });

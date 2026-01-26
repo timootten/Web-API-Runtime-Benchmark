@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <style>
+    .title { font: bold 18px Arial, sans-serif; }
+    .axis-label { font: bold 14px Arial, sans-serif; }
+    .tick-label { font: 10px Arial, sans-serif; }
+    .legend-text { font: 10px Arial, sans-serif; }
+    .grid { stroke: #e0e0e0; stroke-width: 1; }
+    .line { fill: none; stroke-width: 2; }
+  </style>
+  
+  <rect width="100%" height="100%" fill="white"/>
+  <text x="375" y="35" text-anchor="middle" class="title">Memory Usage Over Time</text>
+  <text x="25" y="220" text-anchor="middle" class="axis-label" transform="rotate(-90, 25, 220)">Memory (MB)</text>
+  <line x1="80" y1="380" x2="720" y2="380" class="grid"/>
+  <text x="70" y="384" text-anchor="end" class="tick-label">0.0</text>
+  <line x1="80" y1="316" x2="720" y2="316" class="grid"/>
+  <text x="70" y="320" text-anchor="end" class="tick-label">42.8</text>
+  <line x1="80" y1="252" x2="720" y2="252" class="grid"/>
+  <text x="70" y="256" text-anchor="end" class="tick-label">85.6</text>
+  <line x1="80" y1="188" x2="720" y2="188" class="grid"/>
+  <text x="70" y="192" text-anchor="end" class="tick-label">128.4</text>
+  <line x1="80" y1="124" x2="720" y2="124" class="grid"/>
+  <text x="70" y="128" text-anchor="end" class="tick-label">171.2</text>
+  <line x1="80" y1="60" x2="720" y2="60" class="grid"/>
+  <text x="70" y="64" text-anchor="end" class="tick-label">214.1</text>
+  <text x="80" y="400" text-anchor="middle" class="tick-label">0s</text>
+  <text x="186.66666666666666" y="400" text-anchor="middle" class="tick-label">13s</text>
+  <text x="293.3333333333333" y="400" text-anchor="middle" class="tick-label">26s</text>
+  <text x="400" y="400" text-anchor="middle" class="tick-label">39s</text>
+  <text x="506.66666666666663" y="400" text-anchor="middle" class="tick-label">52s</text>
+  <text x="613.3333333333334" y="400" text-anchor="middle" class="tick-label">65s</text>
+  <text x="720" y="400" text-anchor="middle" class="tick-label">78s</text>
+  <path d="M 80.0 325.7 L 96.4 324.9 L 112.8 324.0 L 129.2 323.0 L 145.6 322.4 L 162.0 323.1 L 178.5 314.6 L 194.9 319.3 L 211.3 318.8 L 227.7 320.2 L 244.1 318.0 L 260.5 319.4 L 276.9 318.9 L 293.3 320.0 L 309.7 319.5 L 326.1 319.7 L 342.6 318.7 L 359.0 317.3 L 375.4 315.9 L 391.8 314.9 L 408.2 313.8 L 424.7 312.4 L 441.1 310.4 L 457.4 308.1 L 473.9 307.8 L 490.3 308.2 L 506.7 314.0" class="line" stroke="#ff7f0e"/>
+  <path d="M 80.0 316.6 L 96.4 283.8 L 112.8 274.5 L 129.2 268.3 L 145.6 265.3 L 162.0 259.9 L 178.5 256.8 L 194.9 253.7 L 211.3 253.1 L 227.7 251.5 L 244.1 245.4 L 260.5 245.6 L 276.9 242.3 L 293.3 241.0 L 309.7 241.4 L 326.2 239.5 L 342.6 237.6 L 359.0 235.7 L 375.4 234.3 L 391.8 232.7 L 408.2 230.1 L 424.7 228.1 L 441.0 226.2 L 457.5 225.0 L 473.9 225.0 L 490.3 224.1 L 506.7 229.2" class="line" stroke="#ffbb78"/>
+  <path d="M 80.0 304.0 L 96.4 288.1 L 112.8 284.1 L 129.2 281.7 L 145.6 281.8 L 162.0 275.1 L 178.5 275.9 L 194.9 274.8 L 211.3 273.5 L 227.7 274.0 L 244.1 274.1 L 260.6 273.5 L 277.0 271.3 L 293.4 272.7 L 309.8 270.2 L 326.2 266.1 L 342.6 265.9 L 359.0 264.6 L 375.5 263.4 L 391.8 262.1 L 408.3 261.1 L 424.7 260.4 L 441.1 259.2 L 457.5 257.1 L 473.9 256.8 L 490.3 256.9 L 506.8 255.6 L 523.2 251.5 L 539.6 254.8 L 556.0 258.1 L 572.4 277.0 L 588.8 282.9 L 605.2 282.2" class="line" stroke="#d62728"/>
+  <path d="M 80.0 342.6 L 96.4 317.8 L 112.8 300.9 L 129.2 274.6 L 145.6 225.7 L 162.0 210.9 L 178.5 210.6 L 194.9 205.1 L 211.3 190.0 L 227.7 199.1 L 244.1 199.4 L 260.5 202.3 L 276.9 203.5 L 293.3 202.4 L 309.7 203.3 L 326.1 200.0 L 342.6 197.5 L 358.9 209.0 L 375.3 205.1 L 391.7 204.8 L 408.2 207.6 L 424.7 207.9 L 441.1 210.8 L 457.5 210.8 L 473.9 215.4 L 490.3 221.5 L 506.7 245.6" class="line" stroke="#5fa2ce"/>
+  <path d="M 80.0 279.3 L 96.4 257.0 L 112.8 248.2 L 129.2 247.0 L 145.6 245.3 L 162.0 237.9 L 178.5 230.4 L 194.9 226.8 L 211.3 228.0 L 227.7 227.4 L 244.1 220.9 L 260.6 206.7 L 277.0 187.5 L 293.4 160.8 L 309.8 123.2 L 326.2 98.4 L 342.6 97.0 L 359.0 96.0 L 375.4 94.8 L 391.8 94.3 L 408.2 93.4 L 424.7 92.2 L 441.1 91.2 L 457.5 89.8 L 473.9 89.4 L 490.3 89.1 L 506.7 96.0" class="line" stroke="#9ecae1"/>
+  <path d="M 80.0 301.7 L 96.5 286.0 L 112.8 281.3 L 129.2 279.3 L 145.6 280.1 L 162.0 278.7 L 178.6 279.8 L 194.9 279.2 L 211.3 275.1 L 227.7 272.6 L 244.1 272.1 L 260.6 270.8 L 277.0 271.2 L 293.3 270.2 L 309.7 269.4 L 326.1 267.4 L 342.6 266.3 L 359.0 267.4 L 375.4 264.2 L 391.8 266.7 L 408.2 266.1 L 424.7 266.2 L 441.0 263.5 L 457.4 263.9 L 473.8 263.2 L 490.3 269.3 L 506.7 265.2 L 523.1 263.9 L 539.5 265.7 L 555.9 271.4 L 572.3 272.7 L 588.7 272.4 L 605.1 294.3 L 621.5 294.3 L 637.9 293.6 L 654.3 295.0 L 670.8 294.6 L 687.2 294.2 L 703.6 294.1 L 720.0 293.8" class="line" stroke="#1f77b4"/>
+  <path d="M 80.0 359.6 L 96.4 353.6 L 112.8 351.8 L 129.3 351.4 L 145.7 349.3 L 162.1 350.5 L 178.5 349.3 L 194.9 349.1 L 211.3 348.6 L 227.7 348.4 L 244.1 347.0 L 260.6 347.7 L 277.0 346.9 L 293.4 346.0 L 309.8 344.4 L 326.2 343.2 L 342.7 341.9 L 359.0 339.5 L 375.4 337.6 L 391.8 337.4 L 408.2 335.0 L 424.7 331.5 L 441.1 332.0 L 457.5 330.8 L 473.9 330.2 L 490.3 330.4 L 506.7 338.5" class="line" stroke="#5fd35f"/>
+  <path d="M 80.0 324.8 L 96.4 289.9 L 112.8 280.1 L 129.2 276.1 L 145.6 268.4 L 162.0 263.4 L 178.4 258.4 L 194.9 258.0 L 211.3 257.6 L 227.6 254.3 L 244.1 252.9 L 260.5 252.8 L 276.9 250.8 L 293.3 248.9 L 309.7 246.6 L 326.1 246.5 L 342.6 242.6 L 358.9 241.4 L 375.4 243.0 L 391.8 240.5 L 408.2 237.9 L 424.6 237.1 L 441.0 235.5 L 457.4 232.5 L 473.8 232.8 L 490.3 232.4 L 506.7 236.8" class="line" stroke="#98df8a"/>
+  <path d="M 80.0 312.0 L 96.4 292.0 L 112.8 289.3 L 129.2 283.1 L 145.6 280.5 L 162.0 279.3 L 178.5 278.6 L 195.0 276.6 L 211.4 274.3 L 227.8 274.4 L 244.2 274.3 L 260.6 272.3 L 277.0 273.2 L 293.4 269.4 L 309.8 265.1 L 326.2 264.6 L 342.7 263.2 L 359.1 262.8 L 375.5 261.7 L 392.0 261.1 L 408.3 259.8 L 424.8 259.3 L 441.2 259.2 L 457.5 257.0 L 474.0 257.3 L 490.3 256.2 L 506.8 256.5 L 523.2 256.1 L 539.6 264.5 L 556.0 265.7 L 572.4 284.4 L 589.0 289.6 L 605.2 289.9" class="line" stroke="#2ca02c"/>
+  <text x="740" y="70" class="legend-text" font-weight="bold">Services</text>
+  <line x1="740" y1="85" x2="760" y2="85" stroke="#ff7f0e" stroke-width="3"/>
+  <text x="765" y="89" class="legend-text">Elysia (Bun)</text>
+  <line x1="740" y1="103" x2="760" y2="103" stroke="#ffbb78" stroke-width="3"/>
+  <text x="765" y="107" class="legend-text">Elysia (Deno)</text>
+  <line x1="740" y1="121" x2="760" y2="121" stroke="#d62728" stroke-width="3"/>
+  <text x="765" y="125" class="legend-text">Elysia (Node.js)</text>
+  <line x1="740" y1="139" x2="760" y2="139" stroke="#5fa2ce" stroke-width="3"/>
+  <text x="765" y="143" class="legend-text">Express (Bun)</text>
+  <line x1="740" y1="157" x2="760" y2="157" stroke="#9ecae1" stroke-width="3"/>
+  <text x="765" y="161" class="legend-text">Express (Deno)</text>
+  <line x1="740" y1="175" x2="760" y2="175" stroke="#1f77b4" stroke-width="3"/>
+  <text x="765" y="179" class="legend-text">Express (Node.js)</text>
+  <line x1="740" y1="193" x2="760" y2="193" stroke="#5fd35f" stroke-width="3"/>
+  <text x="765" y="197" class="legend-text">Hono (Bun)</text>
+  <line x1="740" y1="211" x2="760" y2="211" stroke="#98df8a" stroke-width="3"/>
+  <text x="765" y="215" class="legend-text">Hono (Deno)</text>
+  <line x1="740" y1="229" x2="760" y2="229" stroke="#2ca02c" stroke-width="3"/>
+  <text x="765" y="233" class="legend-text">Hono (Node.js)</text>
+
+  <text x="400" y="485" text-anchor="middle" class="axis-label">Time (seconds)</text>
+  <line x1="80" y1="60" x2="80" y2="380" stroke="#333" stroke-width="2"/>
+  <line x1="80" y1="380" x2="720" y2="380" stroke="#333" stroke-width="2"/>
+</svg>

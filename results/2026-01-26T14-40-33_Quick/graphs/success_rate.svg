@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <style>
+    .title { font: bold 18px Arial, sans-serif; }
+    .axis-label { font: bold 14px Arial, sans-serif; }
+    .tick-label { font: 11px Arial, sans-serif; }
+    .bar-label { font: bold 10px Arial, sans-serif; }
+    .grid { stroke: #e0e0e0; stroke-width: 1; }
+  </style>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="white"/>
+  
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" class="title">Success Rate</text>
+  
+  <!-- Y-axis label -->
+  <text x="25" y="220" text-anchor="middle" class="axis-label" transform="rotate(-90, 25, 220)">Success %</text>
+  
+  <!-- Grid lines and Y-axis ticks -->
+  <line x1="80" y1="380" x2="870" y2="380" class="grid"/>
+  <text x="70" y="384" text-anchor="end" class="tick-label">0.0</text>
+  <line x1="80" y1="316" x2="870" y2="316" class="grid"/>
+  <text x="70" y="320" text-anchor="end" class="tick-label">23.0</text>
+  <line x1="80" y1="252" x2="870" y2="252" class="grid"/>
+  <text x="70" y="256" text-anchor="end" class="tick-label">46.0</text>
+  <line x1="80" y1="188" x2="870" y2="188" class="grid"/>
+  <text x="70" y="192" text-anchor="end" class="tick-label">69.0</text>
+  <line x1="80" y1="124" x2="870" y2="124" class="grid"/>
+  <text x="70" y="128" text-anchor="end" class="tick-label">92.0</text>
+  <line x1="80" y1="60" x2="870" y2="60" class="grid"/>
+  <text x="70" y="64" text-anchor="end" class="tick-label">115.0</text>
+
+  <!-- express-node -->
+  <rect x="93.16666666666667" y="103.28225145268266" width="61.444444444444436" height="276.71774854731734" fill="#1f77b4" stroke="#333" stroke-width="1"/>
+  <text x="123.88888888888889" y="98.28225145268266" text-anchor="middle" class="bar-label">99.4</text>
+  <text x="123.88888888888889" y="400" text-anchor="end" class="tick-label" transform="rotate(-45, 123.88888888888889, 400)">Express (Node.js)</text>
+
+  <!-- express-bun -->
+  <rect x="180.94444444444443" y="101.73913043478257" width="61.444444444444436" height="278.26086956521743" fill="#5fa2ce" stroke="#FFD700" stroke-width="3"/>
+  <text x="211.66666666666666" y="96.73913043478257" text-anchor="middle" class="bar-label">100.0</text>
+  <text x="211.66666666666666" y="400" text-anchor="end" class="tick-label" transform="rotate(-45, 211.66666666666666, 400)">Express (Bun)</text>
+
+  <!-- express-deno -->
+  <rect x="268.72222222222223" y="101.73913043478257" width="61.444444444444436" height="278.26086956521743" fill="#9ecae1" stroke="#333" stroke-width="1"/>
+  <text x="299.44444444444446" y="96.73913043478257" text-anchor="middle" class="bar-label">100.0</text>
+  <text x="299.44444444444446" y="400" text-anchor="end" class="tick-label" transform="rotate(-45, 299.44444444444446, 400)">Express (Deno)</text>
+
+  <!-- hono-node -->
+  <rect x="356.5" y="102.09465512881957" width="61.444444444444436" height="277.90534487118043" fill="#2ca02c" stroke="#333" stroke-width="1"/>
+  <text x="387.22222222222223" y="97.09465512881957" text-anchor="middle" class="bar-label">99.9</text>
+  <text x="387.22222222222223" y="400" text-anchor="end" class="tick-label" transform="rotate(-45, 387.22222222222223, 400)">Hono (Node.js)</text>
+
+  <!-- hono-bun -->
+  <rect x="444.27777777777777" y="101.73913043478257" width="61.444444444444436" height="278.26086956521743" fill="#5fd35f" stroke="#333" stroke-width="1"/>
+  <text x="475" y="96.73913043478257" text-anchor="middle" class="bar-label">100.0</text>
+  <text x="475" y="400" text-anchor="end" class="tick-label" transform="rotate(-45, 475, 400)">Hono (Bun)</text>
+
+  <!-- hono-deno -->
+  <rect x="532.0555555555555" y="101.73913043478257" width="61.444444444444436" height="278.26086956521743" fill="#98df8a" stroke="#333" stroke-width="1"/>
+  <text x="562.7777777777777" y="96.73913043478257" text-anchor="middle" class="bar-label">100.0</text>
+  <text x="562.7777777777777" y="400" text-anchor="end" class="tick-label" transform="rotate(-45, 562.7777777777777, 400)">Hono (Deno)</text>
+
+  <!-- elysia-node -->
+  <rect x="619.8333333333333" y="101.73913043478257" width="61.444444444444436" height="278.26086956521743" fill="#d62728" stroke="#333" stroke-width="1"/>
+  <text x="650.5555555555554" y="96.73913043478257" text-anchor="middle" class="bar-label">100.0</text>
+  <text x="650.5555555555554" y="400" text-anchor="end" class="tick-label" transform="rotate(-45, 650.5555555555554, 400)">Elysia (Node.js)</text>
+
+  <!-- elysia-bun -->
+  <rect x="707.611111111111" y="101.73913043478257" width="61.444444444444436" height="278.26086956521743" fill="#ff7f0e" stroke="#333" stroke-width="1"/>
+  <text x="738.3333333333331" y="96.73913043478257" text-anchor="middle" class="bar-label">100.0</text>
+  <text x="738.3333333333331" y="400" text-anchor="end" class="tick-label" transform="rotate(-45, 738.3333333333331, 400)">Elysia (Bun)</text>
+
+  <!-- elysia-deno -->
+  <rect x="795.3888888888888" y="101.73913043478257" width="61.444444444444436" height="278.26086956521743" fill="#ffbb78" stroke="#333" stroke-width="1"/>
+  <text x="826.111111111111" y="96.73913043478257" text-anchor="middle" class="bar-label">100.0</text>
+  <text x="826.111111111111" y="400" text-anchor="end" class="tick-label" transform="rotate(-45, 826.111111111111, 400)">Elysia (Deno)</text>
+
+  <text x="450" y="485" text-anchor="middle" class="axis-label">Framework (Runtime)</text>
+  
+  <!-- Axes -->
+  <line x1="80" y1="60" x2="80" y2="380" stroke="#333" stroke-width="2"/>
+  <line x1="80" y1="380" x2="870" y2="380" stroke="#333" stroke-width="2"/>
+  
+  <!-- Best performer indicator -->
+  <text x="880" y="35" text-anchor="end" class="tick-label" fill="#FFD700">★ = Best</text>
+</svg>

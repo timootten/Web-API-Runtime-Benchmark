@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <style>
+    .title { font: bold 18px Arial, sans-serif; }
+    .axis-label { font: bold 14px Arial, sans-serif; }
+    .tick-label { font: 12px Arial, sans-serif; }
+    .bar-label { font: bold 9px Arial, sans-serif; }
+    .legend-text { font: 11px Arial, sans-serif; }
+    .grid { stroke: #e0e0e0; stroke-width: 1; }
+  </style>
+  
+  <rect width="100%" height="100%" fill="white"/>
+  <text x="450" y="35" text-anchor="middle" class="title">Average Memory Usage (by Framework)</text>
+  <text x="25" y="220" text-anchor="middle" class="axis-label" transform="rotate(-90, 25, 220)">Memory (MB)</text>
+  <line x1="80" y1="380" x2="870" y2="380" class="grid"/>
+  <text x="70" y="384" text-anchor="end" class="tick-label">0.0</text>
+  <line x1="80" y1="316" x2="870" y2="316" class="grid"/>
+  <text x="70" y="320" text-anchor="end" class="tick-label">46.3</text>
+  <line x1="80" y1="252" x2="870" y2="252" class="grid"/>
+  <text x="70" y="256" text-anchor="end" class="tick-label">92.6</text>
+  <line x1="80" y1="188" x2="870" y2="188" class="grid"/>
+  <text x="70" y="192" text-anchor="end" class="tick-label">139.0</text>
+  <line x1="80" y1="124" x2="870" y2="124" class="grid"/>
+  <text x="70" y="128" text-anchor="end" class="tick-label">185.3</text>
+  <line x1="80" y1="60" x2="870" y2="60" class="grid"/>
+  <text x="70" y="64" text-anchor="end" class="tick-label">231.6</text>
+
+  <rect x="106.33333333333333" y="276.1997640012228" width="63.83333333333333" height="103.80023599877724" fill="#4a90d9" stroke="#333" stroke-width="1"/>
+  <text x="138.25" y="273.1997640012228" text-anchor="middle" class="bar-label">75.1</text>
+
+  <rect x="172.16666666666666" y="228.67010602993105" width="63.83333333333333" height="151.32989397006895" fill="#f5a623" stroke="#333" stroke-width="1"/>
+  <text x="204.08333333333331" y="225.67010602993105" text-anchor="middle" class="bar-label">109.5</text>
+
+  <rect x="238" y="101.73913043478257" width="63.83333333333333" height="278.26086956521743" fill="#68d391" stroke="#333" stroke-width="1"/>
+  <text x="269.9166666666667" y="98.73913043478257" text-anchor="middle" class="bar-label">201.4</text>
+  <text x="205.08333333333331" y="405" text-anchor="middle" class="tick-label">Express</text>
+
+  <rect x="369.66666666666663" y="269.1612370958" width="63.83333333333333" height="110.8387629042" fill="#4a90d9" stroke="#333" stroke-width="1"/>
+  <text x="401.5833333333333" y="266.1612370958" text-anchor="middle" class="bar-label">80.2</text>
+
+  <rect x="435.49999999999994" y="340.9792326033662" width="63.83333333333333" height="39.02076739663379" fill="#f5a623" stroke="#333" stroke-width="1"/>
+  <text x="467.41666666666663" y="337.9792326033662" text-anchor="middle" class="bar-label">28.2</text>
+
+  <rect x="501.33333333333326" y="219.91859265598737" width="63.83333333333333" height="160.08140734401263" fill="#68d391" stroke="#333" stroke-width="1"/>
+  <text x="533.2499999999999" y="216.91859265598737" text-anchor="middle" class="bar-label">115.9</text>
+  <text x="468.41666666666663" y="405" text-anchor="middle" class="tick-label">Hono</text>
+
+  <rect x="633" y="268.0145261509338" width="63.83333333333333" height="111.9854738490662" fill="#4a90d9" stroke="#333" stroke-width="1"/>
+  <text x="664.9166666666666" y="265.0145261509338" text-anchor="middle" class="bar-label">81.0</text>
+
+  <rect x="698.8333333333334" y="316.59771388078855" width="63.83333333333333" height="63.40228611921145" fill="#f5a623" stroke="#333" stroke-width="1"/>
+  <text x="730.75" y="313.59771388078855" text-anchor="middle" class="bar-label">45.9</text>
+
+  <rect x="764.6666666666666" y="223.92358322171356" width="63.83333333333333" height="156.07641677828644" fill="#68d391" stroke="#333" stroke-width="1"/>
+  <text x="796.5833333333333" y="220.92358322171356" text-anchor="middle" class="bar-label">113.0</text>
+  <text x="731.75" y="405" text-anchor="middle" class="tick-label">Elysia</text>
+
+  <rect x="740" y="55" width="140" height="80" fill="white" stroke="#ccc" rx="5"/>
+  <text x="750" y="70" class="legend-text" font-weight="bold">Runtime</text>
+  <rect x="750" y="80" width="15" height="15" fill="#4a90d9"/>
+  <text x="772" y="92" class="legend-text">Node.js</text>
+  <rect x="750" y="100" width="15" height="15" fill="#f5a623"/>
+  <text x="772" y="112" class="legend-text">Bun</text>
+  <rect x="750" y="120" width="15" height="15" fill="#68d391"/>
+  <text x="772" y="132" class="legend-text">Deno</text>
+
+  <text x="450" y="485" text-anchor="middle" class="axis-label">Framework</text>
+  <line x1="80" y1="60" x2="80" y2="380" stroke="#333" stroke-width="2"/>
+  <line x1="80" y1="380" x2="870" y2="380" stroke="#333" stroke-width="2"/>
+</svg>

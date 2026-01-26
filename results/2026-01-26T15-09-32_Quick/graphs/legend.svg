@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 150" width="880" height="150">
+  <style>
+    .title { font: bold 16px Arial, sans-serif; }
+    .legend-text { font: 12px Arial, sans-serif; }
+  </style>
+  <rect width="100%" height="100%" fill="white"/>
+  <text x="440" y="25" text-anchor="middle" class="title">Color Legend - Benchmark Services</text>
+  <rect x="20" y="50" width="20" height="20" fill="#1f77b4" stroke="#333" stroke-width="1"/>
+  <text x="48" y="65" class="legend-text">Express (Node.js)</text>
+  <rect x="300" y="50" width="20" height="20" fill="#5fa2ce" stroke="#333" stroke-width="1"/>
+  <text x="328" y="65" class="legend-text">Express (Bun)</text>
+  <rect x="580" y="50" width="20" height="20" fill="#9ecae1" stroke="#333" stroke-width="1"/>
+  <text x="608" y="65" class="legend-text">Express (Deno)</text>
+  <rect x="20" y="80" width="20" height="20" fill="#2ca02c" stroke="#333" stroke-width="1"/>
+  <text x="48" y="95" class="legend-text">Hono (Node.js)</text>
+  <rect x="300" y="80" width="20" height="20" fill="#5fd35f" stroke="#333" stroke-width="1"/>
+  <text x="328" y="95" class="legend-text">Hono (Bun)</text>
+  <rect x="580" y="80" width="20" height="20" fill="#98df8a" stroke="#333" stroke-width="1"/>
+  <text x="608" y="95" class="legend-text">Hono (Deno)</text>
+  <rect x="20" y="110" width="20" height="20" fill="#d62728" stroke="#333" stroke-width="1"/>
+  <text x="48" y="125" class="legend-text">Elysia (Node.js)</text>
+  <rect x="300" y="110" width="20" height="20" fill="#ff7f0e" stroke="#333" stroke-width="1"/>
+  <text x="328" y="125" class="legend-text">Elysia (Bun)</text>
+  <rect x="580" y="110" width="20" height="20" fill="#ffbb78" stroke="#333" stroke-width="1"/>
+  <text x="608" y="125" class="legend-text">Elysia (Deno)</text>
+</svg>

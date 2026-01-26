@@ -283,7 +283,7 @@ async function runBenchmark(test: TestConfig, profileConfig: ProfileConfig): Pro
 
     // Start resource monitoring
     log('Starting resource monitoring...');
-    resourceMonitor = await monitorResources(test.service, 500); // Collect every 500ms
+    resourceMonitor = await monitorResources(test.service, 250); // Collect every 250ms for more data points
 
     // Run actual benchmark
     await runK6Benchmark(test.name, containerUrl, profileConfig.name);

@@ -406,7 +406,8 @@ interface TimeSeriesData {
 function generateLineChartSVG(
   seriesData: TimeSeriesData[],
   title: string,
-  ylabel: string
+  ylabel: string,
+  useRelativeTime: boolean = true
 ): string {
   if (seriesData.length === 0) return '';
 
@@ -428,18 +429,33 @@ function generateLineChartSVG(
 
   if (filteredData.length === 0) return '';
 
-  // Get all time points and values
-  const allTimes = filteredData.flatMap(s => s.points.map(p => p.time));
-  const allValues = filteredData.flatMap(s => s.points.map(p => p.value));
+  // Convert to relative time (starting from 0) if needed
+  const processedData = filteredData.map(series => {
+    if (!useRelativeTime || series.points.length === 0) return series;
 
-  const minTime = Math.min(...allTimes);
+    const minTime = Math.min(...series.points.map(p => p.time));
+    return {
+      ...series,
+      points: series.points.map(p => ({
+        time: p.time - minTime,
+        value: p.value
+      }))
+    };
+  });
+
+  // Get all time points and values
+  const allTimes = processedData.flatMap(s => s.points.map(p => p.time));
+  const allValues = processedData.flatMap(s => s.points.map(p => p.value));
+
+  // For relative time, start from 0 and find max duration
+  const minTime = 0;
   const maxTime = Math.max(...allTimes);
   const maxValue = Math.max(...allValues) * 1.1 || 1;
 
   const plotWidth = CHART_WIDTH - MARGIN.left - MARGIN.right - 150; // Extra space for legend
   const plotHeight = CHART_HEIGHT - MARGIN.top - MARGIN.bottom;
 
-  const xScale = (t: number) => MARGIN.left + ((t - minTime) / (maxTime - minTime || 1)) * plotWidth;
+  const xScale = (t: number) => MARGIN.left + (t / (maxTime || 1)) * plotWidth;
   const yScale = (v: number) => MARGIN.top + plotHeight - (v / maxValue) * plotHeight;
 
   const yTicks = 5;
@@ -470,18 +486,19 @@ function generateLineChartSVG(
 `;
   }
 
-  // X-axis labels (time)
+  // X-axis labels (relative time in seconds)
   for (let i = 0; i <= xTicks; i++) {
-    const t = minTime + ((maxTime - minTime) / xTicks) * i;
+    const t = (maxTime / xTicks) * i;
     const x = xScale(t);
-    const date = new Date(t * 1000);
-    const label = `${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`;
+    // Format as seconds (timestamps are in milliseconds)
+    const seconds = Math.round(t / 1000);
+    const label = `${seconds}s`;
     svg += `  <text x="${x}" y="${MARGIN.top + plotHeight + 20}" text-anchor="middle" class="tick-label">${label}</text>
 `;
   }
 
   // Draw lines for each service
-  filteredData.forEach((series) => {
+  processedData.forEach((series) => {
     const color = COLORS[series.service] || '#888888';
 
     if (series.points.length < 2) return;
@@ -505,7 +522,7 @@ function generateLineChartSVG(
   svg += `  <text x="${legendX}" y="${legendY}" class="legend-text" font-weight="bold">Services</text>
 `;
 
-  const uniqueServices = [...new Set(filteredData.map(s => s.service))];
+  const uniqueServices = [...new Set(processedData.map(s => s.service))];
   uniqueServices.forEach((service, i) => {
     const color = COLORS[service] || '#888888';
     const label = DISPLAY_NAMES[service] || service;
@@ -516,7 +533,7 @@ function generateLineChartSVG(
 
   // Axes
   svg += `
-  <text x="${MARGIN.left + plotWidth / 2}" y="${CHART_HEIGHT - 15}" text-anchor="middle" class="axis-label">Time</text>
+  <text x="${MARGIN.left + plotWidth / 2}" y="${CHART_HEIGHT - 15}" text-anchor="middle" class="axis-label">Time (seconds)</text>
   <line x1="${MARGIN.left}" y1="${MARGIN.top}" x2="${MARGIN.left}" y2="${MARGIN.top + plotHeight}" stroke="#333" stroke-width="2"/>
   <line x1="${MARGIN.left}" y1="${MARGIN.top + plotHeight}" x2="${MARGIN.left + plotWidth}" y2="${MARGIN.top + plotHeight}" stroke="#333" stroke-width="2"/>
 </svg>`;

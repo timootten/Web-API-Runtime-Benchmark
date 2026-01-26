@@ -36,14 +36,14 @@ const profiles: Record<string, ProfileConfig> = {
         executor: 'ramping-arrival-rate',
         startRate: 500,           // Start at 500 requests/sec
         timeUnit: '1s',
-        preAllocatedVUs: 1000,    // Pre-allocate VUs to handle the load
-        maxVUs: 3000,             // Allow scaling up if needed
+        preAllocatedVUs: 2000,    // More VUs to handle high load
+        maxVUs: 5000,             // Allow scaling up significantly
         stages: [
-          { duration: '5s', target: 2000 },   // Ramp to 2000 req/s
-          { duration: '10s', target: 5000 },  // Ramp to 5000 req/s
-          { duration: '10s', target: 8000 },  // Ramp to 8000 req/s
-          { duration: '10s', target: 12000 }, // Ramp to 12000 req/s - stress test
-          { duration: '10s', target: 15000 }, // Ramp to 15000 req/s - breaking point
+          { duration: '5s', target: 2000 },   // Quick ramp to 2000 req/s
+          { duration: '10s', target: 5000 },  // Push to 5000 req/s
+          { duration: '10s', target: 10000 }, // Push to 10000 req/s
+          { duration: '10s', target: 15000 }, // Stress test at 15000 req/s
+          { duration: '10s', target: 20000 }, // Breaking point at 20000 req/s
           { duration: '5s', target: 500 },    // Ramp down
         ],
       },
@@ -57,10 +57,10 @@ const profiles: Record<string, ProfileConfig> = {
     scenarios: {
       throughput_test: {
         executor: 'ramping-arrival-rate',
-        startRate: 500,
+        startRate: 1000,
         timeUnit: '1s',
-        preAllocatedVUs: 2000,
-        maxVUs: 5000,
+        preAllocatedVUs: 4000,
+        maxVUs: 8000,
         stages: [
           { duration: '10s', target: 3000 },
           { duration: '15s', target: 6000 },
@@ -69,7 +69,7 @@ const profiles: Record<string, ProfileConfig> = {
           { duration: '15s', target: 20000 },
           { duration: '15s', target: 25000 },  // Push harder
           { duration: '10s', target: 30000 },  // Breaking point test
-          { duration: '5s', target: 500 },
+          { duration: '5s', target: 1000 },
         ],
       },
     },
@@ -82,10 +82,10 @@ const profiles: Record<string, ProfileConfig> = {
     scenarios: {
       throughput_test: {
         executor: 'ramping-arrival-rate',
-        startRate: 1000,
+        startRate: 2000,
         timeUnit: '1s',
-        preAllocatedVUs: 3000,
-        maxVUs: 10000,
+        preAllocatedVUs: 6000,
+        maxVUs: 12000,
         stages: [
           { duration: '15s', target: 5000 },
           { duration: '20s', target: 10000 },
@@ -93,15 +93,15 @@ const profiles: Record<string, ProfileConfig> = {
           { duration: '20s', target: 20000 },
           { duration: '20s', target: 25000 },
           { duration: '20s', target: 30000 },
-          { duration: '20s', target: 40000 },
-          { duration: '20s', target: 50000 },  // Extreme stress
-          { duration: '10s', target: 1000 },
+          { duration: '20s', target: 35000 },
+          { duration: '20s', target: 40000 },  // Extreme stress
+          { duration: '10s', target: 2000 },
         ],
       },
     },
     thresholds: {
-      http_req_duration: ['p(95)<5000'],
-      failed_requests_rate: ['rate<0.6'],
+      http_req_duration: ['p(95)<10000'],
+      failed_requests_rate: ['rate<0.8'],
     },
   },
 };

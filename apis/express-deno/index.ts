@@ -61,8 +61,8 @@ app.post('/users', (req: express.Request, res: express.Response) => {
     return;
   }
 
-  const result = insertUser.run(name, email);
-  const user = getUser.get(result.lastInsertRowId);
+  insertUser.run(name, email);
+  const user = getUser.get(db.lastInsertRowId);
   res.status(201).json(user);
 });
 
