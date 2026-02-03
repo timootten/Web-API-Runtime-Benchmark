@@ -172,10 +172,6 @@ This speeds up the first benchmark run:
 docker pull node:20-alpine
 docker pull oven/bun:alpine
 docker pull denoland/deno:alpine
-docker pull grafana/k6:latest
-docker pull prom/prometheus:latest
-docker pull grafana/grafana:latest
-docker pull gcr.io/cadvisor/cadvisor:latest
 ```
 
 ---
@@ -207,7 +203,6 @@ npm run benchmark:full
 
 1. **Infrastructure Setup** (~2 min)
    - Docker Compose starts all containers
-   - Prometheus and cAdvisor begin collecting metrics
    - All 9 API services start up
 
 2. **Per-Service Testing** (repeated 9 times)
@@ -518,8 +513,6 @@ MIT License - see [LICENSE](LICENSE) for details.
 - [Hono](https://hono.dev/) - Ultrafast web framework
 - [Elysia](https://elysiajs.com/) - Ergonomic web framework for Bun
 - [Docker](https://www.docker.com/) - Container platform
-- [Prometheus](https://prometheus.io/) - Monitoring system
-- [Grafana](https://grafana.com/) - Observability platform
 
 ---
 
